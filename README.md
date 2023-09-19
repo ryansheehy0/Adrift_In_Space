@@ -8,6 +8,7 @@ A space themed Sort the Court. You are the captain of an adrift space ship tryin
 - Fuel
 - Food/Water
 
+## How 3 supplies interact
 - Food/Water goes down over time.
 - Crew stays the same if you have Food/Water.
 - If no Food/Water Crew goes down over time.
