@@ -8,6 +8,10 @@
   background-color: #1F384E;
 }
 
+.hover\:bg-custom-blue-hover:hover{
+  background-color: #0E293E;
+}
+
 .pixelated-font{
   font-family: 'Silkscreen', cursive;
   font-family: 'VT323', monospace;
