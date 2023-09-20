@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head> <!-- Contains metadata -->
+        <title>Adrift In Space</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--<link href="/tailwind.css" rel="stylesheet" type="text/css">-->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=VT323&display=swap" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body class="bg-space w-screen h-screen pixelated-font"> <!-- Contains the visible content -->
+     <nav class="w-screen h-12 bg-custom-blue">
+        <button class="text-4xl pl-12">
+          {{#if isLoggedIn}}
+            Logout
+          {{else}}
+            Login
+          {{/if}}
+        </button>
+     </nav>
+
+     <div class="flex items-center justify-between w-screen h-[calc(100%-48px)]">
+      <img src="/assets/main_ship/main_ship_1.png" class="w-40 h-40 absolute left-20 rotate-90">
+      {{{body}}}
+     </div>
+
+      <!-- Supplies -->
+      <div class="absolute bottom-12 left-12 w-52 h-52 bg-custom-blue text-4xl rounded-lg">
+        <img src="/assets/supplies/crew.png" class="w-12 h-12 inline-block">: {{crew}} <br>
+        <img src="/assets/supplies/energy.png" class="w-11 h-11 inline-block">: {{energy}} <br>
+        <img src="/assets/supplies/food.png" class="w-10 h-10 inline-block">: {{foodAndWater}} <br>
+      </div>
+
+    </body>
+</html>

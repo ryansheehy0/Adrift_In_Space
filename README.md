@@ -1,19 +1,23 @@
-# Lost in Space
+# Adrift in Space
 
 ## Description
 A space themed Sort the Court. You are the captain of an adrift space ship trying to survive and get back to your home planet.
 
+Maybe instead of you being a captain you are an AI.
+
 ## 3 supplies
 - Crew
-- Fuel
-- Food/Water
+- Energy
+- Food
+
+There is no need for water because all of the water gets recycled on the space ship.
 
 ## How 3 supplies interact
 - Food/Water goes down over time.
 - Crew stays the same if you have Food/Water.
 - If no Food/Water Crew goes down over time.
-- Fuel goes down over time and gets you closer to home.
-- If Fuel is 0 you don't get closer to home. Stay in the same spot.
+- Energy goes down over time and gets you closer to home.
+- If Energy is 0 you don't get closer to home. Stay in the same spot.
 
 ## How you loose
 When you have 0 Crew.
@@ -38,5 +42,17 @@ You get back to your home planet.
   - Long term consequences
   - How 3 supplies interact with each other:
     - ^ in Crew = decrease in Food/Water
-    - ^ in Fuel = decrease in Crew(because it takes up space)
+    - ^ in Energy = decrease in Crew(because it takes up space)
     - ^ in Food/Water = decrease in Fuel
+
+## Resources
+- [Main Ship Icons]()
+- [Background]()
+- [Home Planet]()
+- Supplies
+  - [Crew](https://www.flaticon.com/free-icon/team_6515003)
+  - [Energy](https://www.flaticon.com/free-icon/thunder_365861)
+  - [Food](https://www.flaticon.com/free-icon/pizza_12065322)
+  - [Water](https://www.flaticon.com/free-icon/humidity_365868)
+  - [Warning](https://www.flaticon.com/free-icon/caution_6514911)
+- [Font](https://fonts.google.com/specimen/VT323)

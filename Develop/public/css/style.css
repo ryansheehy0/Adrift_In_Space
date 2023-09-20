@@ -1,0 +1,14 @@
+.bg-space{
+  background-image: url("../assets/space_background.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-custom-blue{
+  background-color: #1F384E;
+}
+
+.pixelated-font{
+  font-family: 'Silkscreen', cursive;
+  font-family: 'VT323', monospace;
+}
