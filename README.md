@@ -2,6 +2,9 @@
 
 ## Description
 A space themed Sort the Court. You are the captain of an adrift space ship trying to survive and get back to your home planet.
+You are an AI captain of an adrift space ship trying to survive and get back to your home planet.
+
+You are an AI captain of an adrift space ship trying to keep your crew alive and get back to your home planet.
 
 Maybe instead of you being a captain you are an AI.
 
