@@ -8,6 +8,10 @@
   background-color: #1F384E;
 }
 
+input.bg-custom-second-blue{ /*Needs to be more specific to overwrite default background */
+  background-color: #0E293E;
+}
+
 .hover\:bg-custom-blue-hover:hover{
   background-color: #0E293E;
 }

@@ -11,7 +11,7 @@
     </head>
     <body class="bg-space w-screen h-screen pixelated-font"> <!-- Contains the visible content -->
       <nav class="w-screen h-12 bg-custom-blue flex justify-between items-center outline outline-offset-[-4px] rounded-b-lg">
-        <button class="text-4xl pl-12">
+        <button id="loginOrOutBtn" class="text-4xl pl-12">
           {{#if isLoggedIn}}
             Logout
           {{else}}
@@ -46,6 +46,8 @@
         <img src="/assets/supplies/fuel.png" class="w-10 h-10 inline-block">: {{energy}} <br>
         <img src="/assets/supplies/food.png" class="w-10 h-10 inline-block">: {{foodAndWater}} <br>
       </div>
+
+      {{> login}}
 
     </body>
 </html>
