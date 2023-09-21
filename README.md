@@ -36,8 +36,21 @@ You get back to your home planet.
 
 ## Ideas for encounters:
   - Astroid. Go throw or around.
-  - Aliens. Trade or attack
+  - Aliens. Trade or attack.
   - Planet
+
+| Name     | Option 1 | Option 2 |
+|----------|----------|----------|
+| Asteroid | Go left  | Go right |
+| Asteroid Belt | Go threw | Go around |
+
+space squid - a. harvest ink for fuel b. hunt for food
+asteroid field - a. go through b. go around
+pirate ship! - a. fight b. bargain c. run
+black hole - a. wiiide berth b. no time! straight ahead c. worm hole event?
+moon colony - a. touch down and trade b. they're a cult!
+derelict space station - a. plunder for supplies b. biological agent!!! c. shoot it apart
+ancient alien monolith - a. scan b. probe c. radio transmission detected!
 
 ## Future Features
   - Long term consequences
@@ -45,6 +58,7 @@ You get back to your home planet.
     - ^ in Crew = decrease in Food/Water
     - ^ in Energy = decrease in Crew(because it takes up space)
     - ^ in Food/Water = decrease in Fuel
+  - Random outcomes to options
 
 ## Resources
 - [Main Ship Icons]()
@@ -58,3 +72,5 @@ You get back to your home planet.
   - [Water](https://www.flaticon.com/free-icon/humidity_365868)
   - [Warning](https://www.flaticon.com/free-icon/caution_6514911)
 - [Font](https://fonts.google.com/specimen/VT323)
+- Events
+  - [Asteroid belt](https://clipground.com/images/asteroid-belt-clipart-17.png)
