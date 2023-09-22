@@ -3,7 +3,7 @@ const loginOrOutBtn = document.querySelector("#loginOrOutBtn")
 const loginBox = document.querySelector("#loginBox")
 
 // Add event listeners
-loginOrOutBtn.addEventListener("click", (event) => {
+loginOrOutBtn.addEventListener("click", async (event) => {
   event.stopPropagation()
   switch(loginOrOutBtn.textContent.trim()){
     case "Login":
@@ -11,7 +11,7 @@ loginOrOutBtn.addEventListener("click", (event) => {
       break
     case "Logout":
       fetch("/logout", {
-          method: "POST"
+        method: "POST"
       })
       break
   }

@@ -39,16 +39,18 @@ You get back to your home planet.
 
 ## Ideas for encounters:
 
-| Name                   | Option 1             | Option 2                     |
-|------------------------|----------------------|------------------------------|
-| Asteroid               | Go left              | Go right                     |
-| Asteroid Belt          | Go threw             | Go around                    |
-| Space Squid            | Harvest ink for fuel | Hint for food                |
-| Pirate Ship            | Fight                | Bargain                      |
-| Black Hole             | Go around            | No time! Straight ahead      |
-| Moon Colony            | Touch down and trade | They could be a cult. Fight. |
-| Derelict Space Station | Plunder for supplies | Shoot it apart               |
-| Ancient Alien Monolith | Scan                 | Ignore                       |
+| Name                   | Option 1             | Option 2                               | State |
+|------------------------|----------------------|----------------------------------------|-------|
+| Asteroid               | Go left              | Go right                               | Done  |
+| Asteroid Belt          | Go threw             | Go around                              |       |
+| Space Squid            | Harvest ink for fuel | Hint for food                          |       |
+| Pirate Ship            | Fight                | Bargain                                |       |
+| Black Hole             | Go around            | No time! Straight ahead                |       |
+| Moon Colony            | Touch down and trade | They could be a cult. Fight.           |       |
+| Derelict Space Station | Plunder for supplies | Shoot it apart                         |       |
+| Ancient Alien Monolith | Scan                 | Ignore                                 |       |
+| Purple Meteor          | Harvest for fuel     | Too much risk. Leave without touching. |       |
+| 
 
 ## Future Features
   - Long term consequences
@@ -60,20 +62,32 @@ You get back to your home planet.
   - Events happen in random order instead of one after another
 
 ## Resources
-- [Main Ship Icons]()
-- [Background]()
-- [Home Planet]()
+- [Background](https://deep-fold.itch.io/space-background-generator)
 - Supplies
   - [Crew](https://www.flaticon.com/free-icon/team_6515003)
-  - [Energy](https://www.flaticon.com/free-icon/thunder_365861)
   - [Fuel](https://www.flaticon.com/free-icon/start-up_6514940)
   - [Food](https://www.flaticon.com/free-icon/pizza_12065322)
-  - [Water](https://www.flaticon.com/free-icon/humidity_365868)
   - [Warning](https://www.flaticon.com/free-icon/caution_6514911)
 - [Font](https://fonts.google.com/specimen/VT323)
-- Events
-  - [Asteroid belt](https://clipground.com/images/asteroid-belt-clipart-17.png)
+- [Asteroid](http://pixelartmaker.com/art/b02b88d8461a4fb)
+- [Barren Planet, Home Planet](https://helianthus-games.itch.io/)
+- [Main Ships](https://foozlecc.itch.io/)
 
 ## How to create a new event
-- event_name.handlebars in views/
-- event_name.js in controllers/events
+Find the asset first then create event based upon the asset.
+1. Make sure you have your own branch!!!
+  - run `git checkout -b your_first_name`
+  - run `git branch` to double check you are in your branch
+1. Find pixel asset
+1. Copy pixel asset into public/assets/events/
+1. New handlebars event file in views/
+  - Add img with custom tailwind to change size and position
+  - Add script with all attributes.
+    - id, data-eventname, and src
+1. Create backend js file
+  - eventname.js in controllers/events/
+
+
+- Don't do yet.
+1. Create new route in routes.js
+1. Add event in the order in routes.js

@@ -12,10 +12,13 @@ router.get("/", (req, res) => {
     const prevPath = req.headers.referer || "/"
 
     if(prevPath.includes("intro")){
+      req.session.currentEvent = "asteroid"
       res.redirect("/asteroid")
     }else if(prevPath.includes("asteroid")){
+      req.session.currentEvent = "barren_planet"
       res.redirect("/barren_planet")
     }else{
+      req.session.currentEvent = "intro"
       res.redirect("/intro")
     }
 
