@@ -38,30 +38,26 @@ You get back to your home planet.
 - Center has the 2 clickable options
 
 ## Ideas for encounters:
-  - Astroid. Go throw or around.
-  - Aliens. Trade or attack.
-  - Planet
 
-| Name     | Option 1 | Option 2 |
-|----------|----------|----------|
-| Asteroid | Go left  | Go right |
-| Asteroid Belt | Go threw | Go around |
-
-space squid - a. harvest ink for fuel b. hunt for food
-asteroid field - a. go through b. go around
-pirate ship! - a. fight b. bargain c. run
-black hole - a. wiiide berth b. no time! straight ahead c. worm hole event?
-moon colony - a. touch down and trade b. they're a cult!
-derelict space station - a. plunder for supplies b. biological agent!!! c. shoot it apart
-ancient alien monolith - a. scan b. probe c. radio transmission detected!
+| Name                   | Option 1             | Option 2                     |
+|------------------------|----------------------|------------------------------|
+| Asteroid               | Go left              | Go right                     |
+| Asteroid Belt          | Go threw             | Go around                    |
+| Space Squid            | Harvest ink for fuel | Hint for food                |
+| Pirate Ship            | Fight                | Bargain                      |
+| Black Hole             | Go around            | No time! Straight ahead      |
+| Moon Colony            | Touch down and trade | They could be a cult. Fight. |
+| Derelict Space Station | Plunder for supplies | Shoot it apart               |
+| Ancient Alien Monolith | Scan                 | Ignore                       |
 
 ## Future Features
   - Long term consequences
   - How 3 supplies interact with each other:
-    - ^ in Crew = decrease in Food/Water
-    - ^ in Energy = decrease in Crew(because it takes up space)
-    - ^ in Food/Water = decrease in Fuel
+    - ^ in Crew = decrease in Food
+    - ^ in Fuel = decrease in Crew(because it takes up space)
+    - ^ in Food = decrease in Fuel
   - Random outcomes to options
+  - Events happen in random order instead of one after another
 
 ## Resources
 - [Main Ship Icons]()
@@ -77,3 +73,7 @@ ancient alien monolith - a. scan b. probe c. radio transmission detected!
 - [Font](https://fonts.google.com/specimen/VT323)
 - Events
   - [Asteroid belt](https://clipground.com/images/asteroid-belt-clipart-17.png)
+
+## How to create a new event
+- event_name.handlebars in views/
+- event_name.js in controllers/events

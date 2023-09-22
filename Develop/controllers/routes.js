@@ -1,8 +1,10 @@
 const router = require("express").Router()
 const intro = require("./intro")
-const asteroid = require("./asteroid")
+const asteroidEvent = require("./events/asteroid")
+const barrenPlanetEvent = require("./events/barren_planet")
 
-router.use("/asteroid", asteroid)
+router.use("/asteroid", asteroidEvent.getRouter())
+router.use("/barren_planet", barrenPlanetEvent.getRouter())
 router.use("/intro", intro)
 
 router.get("/", (req, res) => {
@@ -12,7 +14,7 @@ router.get("/", (req, res) => {
     if(prevPath.includes("intro")){
       res.redirect("/asteroid")
     }else if(prevPath.includes("asteroid")){
-      res.redirect("/intro")
+      res.redirect("/barren_planet")
     }else{
       res.redirect("/intro")
     }
