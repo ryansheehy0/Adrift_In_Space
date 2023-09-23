@@ -1,14 +1,14 @@
 const { where } = require("sequelize")
 const {User, GameState} = require("../models/index")
 
-async function saveSession(session, user){
+async function saveSession(session, userId){
   // Check if the user has a gameState saved
   const hasGameState = await GameState.findOne({
     include: [
       {
         model: User,
         where: {
-          id: user.id
+          id: userId
         }
       }
     ]
@@ -22,7 +22,7 @@ async function saveSession(session, user){
       fuel: session.fuel,
       food: session.food,
       current_event: session.currentEvent,
-      user_id: user.id
+      user_id: userId
     })
   }else{
     // If gameState saved then update
@@ -32,10 +32,10 @@ async function saveSession(session, user){
       fuel: session.fuel,
       food: session.food,
       current_event: session.currentEvent,
-      user_id: user.id
+      user_id: userId
     },
       {
-        where: {id: user.id}
+        where: {id: userId}
       }
     )
   }

@@ -1,14 +1,24 @@
 const router = require("express").Router()
+const saveSession = require("../utils/saveSession")
 const intro = require("./intro")
 const asteroidEvent = require("./events/asteroid")
 const barrenPlanetEvent = require("./events/barren_planet")
+const login = require("./login")
+const logout = require("./logout")
 
 router.use("/asteroid", asteroidEvent.getRouter())
 router.use("/barren_planet", barrenPlanetEvent.getRouter())
 router.use("/intro", intro)
+router.use("/login", login)
+router.use("/logout", logout)
 
 router.get("/", (req, res) => {
   try{
+    // If user logged in save current state
+    if(Boolean(req.session.loggedInUser)){
+      saveSession(req.session, req.session.loggedInUser)
+    }
+
     const prevPath = req.headers.referer || "/"
 
     if(prevPath.includes("intro")){
