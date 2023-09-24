@@ -1,16 +1,16 @@
 <div id="signupBox" class="w-4/5 h-fit bg-custom-blue z-10 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] rounded-lg outline outline-offset-[-4px] hidden">
   <form class="m-4">
     <h3 class="text-2xl">Username</h3>
-    <input id="signupUsername" type="text" name="username" class="w-full text-lg h-8 focus:outline-none pl-1 rounded">
+    <input id="username" type="text" name="username" class="w-full text-lg h-8 focus:outline-none pl-1 rounded">
 
     <h3 class="text-2xl mt-4">Password</h3>
-    <input id="signupPassword" type="password" name="password" class="w-full text-lg h-8 focus:outline-none pl-1 rounded" required>
+    <input id="password" type="password" name="password" class="w-full text-lg h-8 focus:outline-none pl-1 rounded" required>
 
-    <p id="isWrongWarning" class="text-red-600 text-lg hidden">Username already taken.</p>
+    <p id="isWrongWarning" class="text-red-600 text-lg hidden">Failed to create new account. Please try another username.</p>
 
-    <input id="signupSubmit" type="submit" value="Sign Up" class="w-full text-lg bg-custom-second-blue mt-4 py-1 rounded text-white" required>
+    <input id="submit" type="submit" value="Sign Up" class="w-full text-lg bg-custom-second-blue mt-4 py-1 rounded text-white" required>
 
-    <button class="text-blue-600">Login instead</button>
+    <button id="loginLink" class="text-blue-600">Login instead</button>
   </form>
 </div>
 

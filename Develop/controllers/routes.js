@@ -3,13 +3,19 @@ const saveSession = require("../utils/saveSession")
 const intro = require("./intro")
 const asteroidEvent = require("./events/asteroid")
 const barrenPlanetEvent = require("./events/barren_planet")
+
+// Account path imports
 const login = require("./login")
+const signup = require("./signup")
 const logout = require("./logout")
 
 router.use("/asteroid", asteroidEvent.getRouter())
 router.use("/barren_planet", barrenPlanetEvent.getRouter())
 router.use("/intro", intro)
+
+// Account paths
 router.use("/login", login)
+router.use("/signup", signup)
 router.use("/logout", logout)
 
 router.get("/", (req, res) => {

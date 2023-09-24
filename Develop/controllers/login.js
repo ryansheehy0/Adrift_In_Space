@@ -4,6 +4,7 @@ const saveSession = require("../utils/saveSession")
 const {User, GameState} = require("../models/index")
 
 router.post("/", async (req, res) => {
+  // Get username and password
   const username = req.body.username
   const password = req.body.password
 

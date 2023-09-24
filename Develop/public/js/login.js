@@ -1,3 +1,16 @@
+async function sendLogin(username, password){
+  return await fetch("/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      username,
+      password
+    })
+  })
+}
+
 function login(){
   // Get elements
   const loginBox = document.querySelector("#loginBox")
@@ -6,35 +19,45 @@ function login(){
   const passwordField = document.querySelector("#loginPassword")
   const loginSubmit = document.querySelector("#loginSubmit")
   const isWrongWarning = document.querySelector("#isWrongWarning")
-  const signupLink = document.querySelector("#signupLink")
+
+    // Sign up elements
+    const signupLink = document.querySelector("#signupLink")
+    const signupBox = document.querySelector("#signupBox")
 
   // Add event listeners
   loginSubmit.addEventListener("click", async (event) => {
-    event.preventDefault()
+    event.preventDefault() // Stop submission of form
 
-    let response = await fetch("/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        username: usernameField.value,
-        password: passwordField.value
-      })
-    })
+    // Get username and password
+    const username = usernameField.value
+    const password = passwordField.value
 
+    // Send username and password to /login
+    const response = await sendLogin(username, password)
+
+    // If the login didn't work
     if(!response.ok){
       isWrongWarning.classList.remove("hidden")
       return
     }
 
+    // If the login did work
     isWrongWarning.classList.add("hidden")
     loginBox.classList.add("hidden")
     loginOrOutBtn.textContent = "Logout"
   })
 
 
-  signupLink
+  // When the sign up link is clicked
+  signupLink.addEventListener("click", (event) => {
+    event.preventDefault() // Stop submission of form
+
+    // Hide login box
+    loginBox.classList.add("hidden")
+
+    // Show signup box
+    signupBox.classList.remove("hidden")
+  })
 }
 
 login()
