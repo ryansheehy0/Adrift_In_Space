@@ -23,6 +23,7 @@ app.use(session({
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, "/public")))
+app.use("/howler", express.static(path.join(__dirname, "/node_modules/howler/dist")))
 app.use("/", routes)
 
 sequelize.sync().then(() => {
