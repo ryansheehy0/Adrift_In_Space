@@ -13,12 +13,14 @@ async function sendLogin(username, password){
 
 function login(){
   // Get elements
-  const loginBox = document.querySelector("#loginBox")
   const loginOrOutBtn = document.querySelector("#loginOrOutBtn")
-  const usernameField = document.querySelector("#loginUsername")
-  const passwordField = document.querySelector("#loginPassword")
-  const loginSubmit = document.querySelector("#loginSubmit")
-  const isWrongWarning = document.querySelector("#isWrongWarning")
+
+    // Login Box elements
+    const loginBox = document.querySelector("#loginBox")
+      const usernameField = loginBox.querySelector("#loginUsername")
+      const passwordField = loginBox.querySelector("#loginPassword")
+      const loginSubmit = loginBox.querySelector("#loginSubmit")
+      const warning = loginBox.querySelector("#warning")
 
     // Sign up elements
     const signupLink = document.querySelector("#signupLink")
@@ -37,12 +39,12 @@ function login(){
 
     // If the login didn't work
     if(!response.ok){
-      isWrongWarning.classList.remove("hidden")
+      warning.classList.remove("hidden")
       return
     }
 
     // If the login did work
-    isWrongWarning.classList.add("hidden")
+    warning.classList.add("hidden")
     loginBox.classList.add("hidden")
     loginOrOutBtn.textContent = "Logout"
   })
@@ -50,11 +52,12 @@ function login(){
 
   // When the sign up link is clicked
   signupLink.addEventListener("click", (event) => {
-    event.preventDefault() // Stop submission of form
-
+    // Stop submission of form
+    event.preventDefault()
+    // Hide warning message
+    warning.classList.add("hidden")
     // Hide login box
     loginBox.classList.add("hidden")
-
     // Show signup box
     signupBox.classList.remove("hidden")
   })

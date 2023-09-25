@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const {User, GameState} = require("../models/index")
+const {User, GameState} = require("../../models/index")
 
 router.get("/", async (req, res) => {
   try{

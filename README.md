@@ -39,13 +39,20 @@ You get back to your home planet.
 
 ## Ideas for encounters:
 
-| Name                   | Option 1             | Option 2                               | State |
-|------------------------|----------------------|----------------------------------------|-------|
-| Asteroid               | Go left              | Go right                               | Done  |
+| Name             | Option 1                                                            | Option 2                                                  |
+|------------------|---------------------------------------------------------------------|-----------------------------------------------------------|
+| Futuristic ship  | Give food get crew                                                  | Give food for fuel                                        |
+|                  | Give 1 food get 2 crew                                              | Give 1 food get 3 fuel                                    |
+| Gas Giant        | You are too close Release some food to get out.                     | Increase power by using more fuel.                        |
+|                  | - 2 food                                                            | - 2 fuel                                                  |
+| Ice planet       | Ask for more some crew for some fuel                                | Release some crew for some fuel                           |
+|                  | + 1 crew - 1 fuel                                                   | + 1 fuel - 1 crew                                         |
+| Lava Planet      | Harvest some food growing on the planet | 
+
+
 | Asteroid Belt          | Go threw             | Go around                              |       |
 | Space Squid            | Harvest ink for fuel | Hint for food                          |       |
 | Pirate Ship            | Fight                | Bargain                                |       |
-| Black Hole             | Go around            | No time! Straight ahead                |       |
 | Moon Colony            | Touch down and trade | They could be a cult. Fight.           |       |
 | Derelict Space Station | Plunder for supplies | Shoot it apart                         |       |
 | Ancient Alien Monolith | Scan                 | Ignore                                 |       |
@@ -69,9 +76,14 @@ You get back to your home planet.
   - [Food](https://www.flaticon.com/free-icon/pizza_12065322)
   - [Warning](https://www.flaticon.com/free-icon/caution_6514911)
 - [Font](https://fonts.google.com/specimen/VT323)
-- [Asteroid](http://pixelartmaker.com/art/b02b88d8461a4fb)
-- [Barren Planet, Home Planet](https://helianthus-games.itch.io/)
-- [Main Ships](https://foozlecc.itch.io/)
+- Events
+  - [Pixel Art Maker](https://pixelartmaker.com/gallery)
+    - [Asteroid](http://pixelartmaker.com/art/b02b88d8461a4fb)
+    - [Purple Asteroid](http://pixelartmaker.com/art/634cc56c55a8cf2)
+  - [Planets and other stuff](https://helianthus-games.itch.io/)
+  - [Space Ships](https://foozlecc.itch.io/)
+  - [Planet Generator](https://deep-fold.itch.io/pixel-planet-generator)
+  - [Crystal Asteroid](https://www.pinclipart.com/maxpin/mihxbJ/)
 
 ## How to create a new event
 Find the asset first then create event based upon the asset.

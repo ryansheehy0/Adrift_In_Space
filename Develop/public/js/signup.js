@@ -17,7 +17,7 @@ function signup(){
     const usernameField = signupBox.querySelector("#username")
     const passwordField = signupBox.querySelector("#password")
     const signupSubmit = signupBox.querySelector("#submit")
-    const isWrongWarning = signupBox.querySelector("#isWrongWarning")
+    const warning = signupBox.querySelector("#warning")
 
   const loginOrOutBtn = document.querySelector("#loginOrOutBtn")
 
@@ -34,7 +34,7 @@ function signup(){
     const isInfoSet = username != "" && password != ""
     if(!isInfoSet){
       // show warning message
-      isWrongWarning.classList.remove("hidden")
+      warning.classList.remove("hidden")
       return
     }
 
@@ -44,13 +44,13 @@ function signup(){
     // If the sign up didn't work
     if(!response.ok){
       // show warning message
-      isWrongWarning.classList.remove("hidden")
+      warning.classList.remove("hidden")
       return
     }
 
     // If the sign up did work
       // Hide warning message
-      isWrongWarning.classList.add("hidden")
+      warning.classList.add("hidden")
       // hide signup box
       signupBox.classList.add("hidden")
       // change loginOrOut Btn to Logout
@@ -63,7 +63,7 @@ function signup(){
     // Stop submission of form
     event.preventDefault()
     // Hide warning message
-    isWrongWarning.classList.add("hidden")
+    warning.classList.add("hidden")
     // Hide signup box
     signupBox.classList.add("hidden")
     // Show login box

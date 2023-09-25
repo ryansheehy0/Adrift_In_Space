@@ -2,9 +2,9 @@ function handleLoginOrOut(){
   // Get elements
   const loginOrOutBtn = document.querySelector("#loginOrOutBtn")
   const loginBox = document.querySelector("#loginBox")
-    const loginIsWrongWarning = loginBox.querySelector("#isWrongWarning")
+    const loginWarning = loginBox.querySelector("#warning")
   const signupBox = document.querySelector("#signupBox")
-    const signupIsWrongWarning = signupBox.querySelector("#isWrongWarning")
+    const signupWarning = signupBox.querySelector("#warning")
 
   // Add event listeners
 
@@ -47,11 +47,11 @@ function handleLoginOrOut(){
     // Hide login box
     loginBox.classList.add("hidden")
     // Hide login warning
-    loginIsWrongWarning.classList.add("hidden")
+    loginWarning.classList.add("hidden")
     // Hide sign up box
     signupBox.classList.add("hidden")
     // hide signup warning
-    signupIsWrongWarning.classList.add("hidden")
+    signupWarning.classList.add("hidden")
   })
 }
 
