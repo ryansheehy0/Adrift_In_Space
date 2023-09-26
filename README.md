@@ -1,8 +1,7 @@
 # Adrift in Space
 
 ## Description
-A space themed Sort the Court. You are the captain of an adrift space ship trying to survive and get back to your home planet.
-You are an AI captain of an adrift space ship trying to survive and get back to your home planet.
+A space themed Sort the Court. You are an AI captain of an adrift space ship trying to survive and get back to your home planet.
 
 You are an AI captain of an adrift space ship trying to keep your crew alive and get back to your home planet.
 
@@ -41,13 +40,14 @@ You get back to your home planet.
 
 | Name             | Option 1                                                            | Option 2                                                  |
 |------------------|---------------------------------------------------------------------|-----------------------------------------------------------|
-| Futuristic ship  | Give food get crew                                                  | Give food for fuel                                        |
-|                  | Give 1 food get 2 crew                                              | Give 1 food get 3 fuel                                    |
-| Gas Giant        | You are too close Release some food to get out.                     | Increase power by using more fuel.                        |
-|                  | - 2 food                                                            | - 2 fuel                                                  |
 | Ice planet       | Ask for more some crew for some fuel                                | Release some crew for some fuel                           |
 |                  | + 1 crew - 1 fuel                                                   | + 1 fuel - 1 crew                                         |
 | Lava Planet      | Harvest some food growing on the planet | 
+
+| Thermal Planet |
+| White Galaxy |
+| Imperial Scout |
+| Imperial stuff |
 
 
 | Asteroid Belt          | Go threw             | Go around                              |       |
@@ -56,8 +56,6 @@ You get back to your home planet.
 | Moon Colony            | Touch down and trade | They could be a cult. Fight.           |       |
 | Derelict Space Station | Plunder for supplies | Shoot it apart                         |       |
 | Ancient Alien Monolith | Scan                 | Ignore                                 |       |
-| Purple Meteor          | Harvest for fuel     | Too much risk. Leave without touching. |       |
-| 
 
 ## Future Features
   - Long term consequences

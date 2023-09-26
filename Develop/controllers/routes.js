@@ -14,6 +14,7 @@ const blackHoleEvent = require("./events/black_hole")
 const blueStarEvent = require("./events/blue_star")
 const crystalAsteroidEvent = require("./events/crystal_asteroid")
 const futuristicShipEvent = require("./events/futuristic_ship")
+const gasGiantEvent = require("./events/gas_giant")
 
 router.use("/asteroid", asteroidEvent.getRouter())
 router.use("/barren_planet", barrenPlanetEvent.getRouter())
@@ -21,6 +22,7 @@ router.use("/black_hole", blackHoleEvent.getRouter())
 router.use("/blue_star", blueStarEvent.getRouter())
 router.use("/crystal_asteroid", crystalAsteroidEvent.getRouter())
 router.use("/futuristic_ship", futuristicShipEvent.getRouter())
+router.use("/gas_giant", gasGiantEvent.getRouter())
 
 // Account paths
 const login = require("./login")
@@ -66,6 +68,9 @@ router.get("/", (req, res) => {
     }else if(prevEvent === "crystal_asteroid"){
       req.session.currentEvent = "futuristic_ship"
       res.redirect("/futuristic_ship")
+    }else if(prevEvent === "futuristic_ship"){
+      req.session.currentEvent = "gas_giant"
+      res.redirect("/gas_giant")
     }else{
       req.session.currentEvent = "intro"
       res.redirect("/intro")
