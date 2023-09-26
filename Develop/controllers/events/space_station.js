@@ -8,8 +8,10 @@ const args = {
   handlebarsName: "space_station",
   option1Function: function(req, locals){
     locals.textEventParagraph = "You hail the space station. It has been commandeered by pirates! They race to intercept you. You are boarded and lose 2 crew and 2 food."
-    locals.crew -= 1
-    req.session.crew -= 1
+    locals.crew -= 2
+    req.session.crew -= 2
+    locals.food -= 2
+    req.session.food -=2
   },
   option2Function: function(req, locals){
     locals.textEventParagraph = "You do not hail the space station and continue on your journey."
