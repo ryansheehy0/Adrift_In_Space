@@ -5,6 +5,16 @@ function Event({textEventTitle, textEventParagraph, option1, option2, handlebars
   let locals
 
   router.get("/", (req, res) => {
+    if(req.session.crew <= 0){
+      res.redirect("/gameover")
+      return
+    }
+
+    if(req.session.lightYears <= 0){
+      res.redirect("/youwin")
+      return
+    }
+
     locals = {
       isLoggedIn: Boolean(req.session.loggedInUser),
       lightYears: req.session.lightYears,
@@ -38,16 +48,37 @@ function Event({textEventTitle, textEventParagraph, option1, option2, handlebars
     locals.option2 = "Continue"
   }
 
+  function nonNegative(req){
+    if(req.session.lightYears < 0){
+      req.session.lightYears = 0
+      locals.lightYears = 0
+    }
+    if(req.session.crew < 0){
+      req.session.crew = 0
+      locals.crew = 0
+    }
+    if(req.session.fuel < 0){
+      req.session.fuel = 0
+      locals.fuel = 0
+    }
+    if(req.session.food < 0){
+      req.session.food = 0
+      locals.food = 0
+    }
+  }
+
   router.get("/1", (req, res) => {
-    options(req)
+    options(req, res)
     option1Function(req, locals)
+    nonNegative(req)
 
     res.render(handlebarsName, locals)
   })
 
   router.get("/2", (req, res) => {
-    options(req)
+    options(req, res)
     option2Function(req, locals)
+    nonNegative(req)
 
     res.render(handlebarsName, locals)
   })

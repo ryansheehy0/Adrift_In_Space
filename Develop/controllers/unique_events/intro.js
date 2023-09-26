@@ -4,7 +4,7 @@ const {User, GameState} = require("../../models/index")
 router.get("/", async (req, res) => {
   try{
     const lightYears = 25
-    const crew = 10
+    const crew = 5
     const fuel = 15
     const food = 10
 

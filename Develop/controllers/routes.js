@@ -4,8 +4,12 @@ const saveSession = require("../utils/saveSession")
 
 // Unique Events
 const intro = require("./unique_events/intro")
+const gameOver = require("./unique_events/gameover")
+const youWin = require("./unique_events/youwin")
 
 router.use("/intro", intro)
+router.use("/gameover", gameOver)
+router.use("/youwin", youWin)
 
 // Events
 const asteroidEvent = require("./events/asteroid")
@@ -15,6 +19,7 @@ const blueStarEvent = require("./events/blue_star")
 const crystalAsteroidEvent = require("./events/crystal_asteroid")
 const futuristicShipEvent = require("./events/futuristic_ship")
 const gasGiantEvent = require("./events/gas_giant")
+const icePlanetEvent = require("./events/ice_planet")
 
 router.use("/asteroid", asteroidEvent.getRouter())
 router.use("/barren_planet", barrenPlanetEvent.getRouter())
@@ -23,6 +28,7 @@ router.use("/blue_star", blueStarEvent.getRouter())
 router.use("/crystal_asteroid", crystalAsteroidEvent.getRouter())
 router.use("/futuristic_ship", futuristicShipEvent.getRouter())
 router.use("/gas_giant", gasGiantEvent.getRouter())
+router.use("/ice_planet", icePlanetEvent.getRouter())
 
 // Account paths
 const login = require("./login")
@@ -71,6 +77,9 @@ router.get("/", (req, res) => {
     }else if(prevEvent === "futuristic_ship"){
       req.session.currentEvent = "gas_giant"
       res.redirect("/gas_giant")
+    }else if(prevEvent === "gas_giant"){
+      req.session.currentEvent = "ice_planet"
+      res.redirect("/ice_planet")
     }else{
       req.session.currentEvent = "intro"
       res.redirect("/intro")
