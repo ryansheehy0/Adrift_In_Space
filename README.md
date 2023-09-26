@@ -40,9 +40,9 @@ You get back to your home planet.
 
 | Name             | Option 1                                                            | Option 2                                                  |
 |------------------|---------------------------------------------------------------------|-----------------------------------------------------------|
-| Ice planet       | Ask for more some crew for some fuel                                | Release some crew for some fuel                           |
-|                  | + 1 crew - 1 fuel                                                   | + 1 fuel - 1 crew                                         |
-| Lava Planet      | Harvest some food growing on the planet | 
+| Lava Planet      | Harvest some food growing on the planet. | 
+
+
 
 | Thermal Planet |
 | White Galaxy |

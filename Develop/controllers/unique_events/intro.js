@@ -17,7 +17,17 @@ router.get("/", async (req, res) => {
       isLoggedIn: Boolean(req.session.loggedInUser),
       lightYears,
       textEventTitle: "Home Planet",
-      textEventParagraph: "You are an AI captain of an adrift space ship trying to keep your crew alive and get back to your home planet. For each event you are given 2 options. Each option will result in outcomes which can be good, bad, or neutral. If you have no more crew you loose. If your food gets to 0 your crew slowly dies. In order to get closer to your home you need fuel. If your fuel goes to 0 you have to wait for an event to get more fuel. Good luck and may you make it back home.",
+      textEventParagraph: `
+  You are an AI captain of an adrift space ship trying to keep your crew alive and get back to your home planet. 
+
+  For each event you are given 2 options. Each option will result in outcomes which can be good, bad, or neutral. 
+
+  Each event 1 food is consumed. If you have 0 food 1 crew member dies. If you have 0 crew you loose.
+
+  If you have fuel, 1 fuel is consumed and you travel 1 light year closer to home. If you have 0 fuel then you don't travel any closer to home and have to wait for an event to get fuel.
+
+  Good luck and may you make it back home.,
+`,
       option1: "Option 1: Continue",
       option2: "Option 2: Continue",
       crew,

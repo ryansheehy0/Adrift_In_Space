@@ -7,18 +7,44 @@ const args = {
   option2: "Trade food for fuel.",
   handlebarsName: "futuristic_ship",
   option1Function: function(req, locals){
-    locals.textEventParagraph = "You give 2 food and get 2 crew."
-    locals.food -= 2
-    req.session.food -= 2
-    locals.crew += 2
-    req.session.crew += 2
+    if(req.session.food >= 2){
+      locals.textEventParagraph = "You give 2 food and get 2 crew."
+      locals.food -= 2
+      req.session.food -= 2
+      locals.crew += 2
+      req.session.crew += 2
+    }else if(req.session.food = 1){
+      locals.textEventParagraph = "You give 1 food and get 1 crew."
+      locals.food -= 1
+      req.session.food -= 1
+      locals.crew += 1
+      req.session.crew += 1
+    }else{
+      locals.textEventParagraph = `You are receiving a message. "Our scans show you don't have any food. Therefore, will will take 1 of your crew members to eat them."`
+      locals.crew -= 1
+      req.session.crew -= 1
+    }
   },
   option2Function: function(req, locals){
-    locals.textEventParagraph = "You give 2 food and get 2 fuel."
-    locals.food -= 2
-    req.session.food -= 2
-    locals.fuel += 2
-    req.session.fuel += 2
+    if(req.session.food >=2 ){
+      locals.textEventParagraph = "You give 2 food and get 2 fuel."
+      locals.food -= 2
+      req.session.food -= 2
+      locals.fuel += 2
+      req.session.fuel += 2
+    }else if(req.session.food = 1){
+      locals.textEventParagraph = "You give 1 food and get 1 fuel."
+      locals.food -= 1
+      req.session.food -= 1
+      locals.fuel += 1
+      req.session.fuel += 1
+    }else{
+      locals.textEventParagraph = `You are receiving a message. "Our scans show you don't have any food. Therefore, will will take 1 of your crew members to eat them and give you 1 fuel."`
+      locals.crew -= 1
+      req.session.crew -= 1
+      locals.fuel += 1
+      req.session.fuel += 1
+    }
   }
 }
 
