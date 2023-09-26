@@ -1,53 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head> <!-- Contains metadata -->
-        <title>Adrift In Space</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!--<link href="/tailwind.css" rel="stylesheet" type="text/css">-->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=VT323&display=swap" rel="stylesheet">
-        <link href="/css/style.css" rel="stylesheet" type="text/css">
-    </head>
-    <body class="bg-space w-screen h-screen pixelated-font"> <!-- Contains the visible content -->
-      <nav class="w-screen h-12 bg-custom-blue flex justify-between items-center outline outline-offset-[-4px] rounded-b-lg">
-        <button id="loginOrOutBtn" class="text-4xl pl-12">
-          {{#if isLoggedIn}}
-            Logout
-          {{else}}
-            Login
-          {{/if}}
-        </button>
-        <p class="text-4xl pr-12">{{lightYears}} light years from home</p>
-      </nav>
 
-      <div class="flex items-center justify-between w-screen h-[calc(100%-48px)]">
-        <img src="/assets/main_ship/main_ship_1.png" class="w-40 h-40 absolute left-14 rotate-90 translate-y-[-5px]">
-        {{{body}}}
-      </div>
+<head> <!-- Contains metadata -->
+  <title>Adrift In Space</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--<link href="/tailwind.css" rel="stylesheet" type="text/css">-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=VT323&display=swap" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
 
-      <!-- Text Events -->
-      <div class="absolute top-24 right-12 w-96 h-fit bg-custom-blue outline outline-offset-[-4px] rounded-lg p-4">
-        <h2 class="text-3xl">{{textEventTitle}}</h2>
-        <p class="text-xl">{{textEventParagraph}}</p>
-      </div>
+<body class="bg-space w-screen h-screen pixelated-font"> <!-- Contains the visible content -->
+  <nav
+    class="w-screen h-12 bg-custom-blue flex justify-between items-center outline outline-offset-[-4px] rounded-b-lg">
+    <button id="loginOrOutBtn" class="text-4xl pl-12">
+      {{#if isLoggedIn}}
+      Logout
+      {{else}}
+      Login
+      {{/if}}
+    </button>
+    <p class="text-4xl pr-12">{{lightYears}} light years from home</p>
+  </nav>
 
-      <!-- Options -->
-      <button id="option1" class="w-fit h-fit absolute bottom-[calc(50%-48px+12px)] left-[calc(48px+160px+48px)] translate-y-[-50%] bg-custom-blue rounded-lg outline outline-offset-[-4px] p-4 text-xl hover:bg-custom-blue-hover">
-        {{option1}}
-      </button>
-      <button id="option2" class="w-fit h-fit absolute top-[calc(50%+48px+12px)] left-[calc(48px+160px+48px)] translate-y-[-50%] bg-custom-blue rounded-lg outline outline-offset-[-4px] p-4 text-xl hover:bg-custom-blue-hover">
-        {{option2}}
-      </button>
+  <div class="flex items-center justify-between w-screen h-[calc(100%-48px)]">
+    <img src="/assets/main_ship/main_ship_1.png" class="w-40 h-40 absolute left-14 rotate-90 translate-y-[-5px]">
+    {{{body}}}
+  </div>
 
-      <!-- Supplies -->
-      <div class="absolute bottom-12 left-12 w-fit h-fit bg-custom-blue text-4xl rounded-lg p-6 outline outline-offset-[-4px]">
-        <img src="/assets/supplies/crew.png" class="w-10 h-10 inline-block">: {{crew}} <br>
-        <img src="/assets/supplies/fuel.png" class="w-10 h-10 inline-block">: {{fuel}} <br>
-        <img src="/assets/supplies/food.png" class="w-10 h-10 inline-block">: {{food}} <br>
-      </div>
+  <!-- Text Events -->
+  <div class="absolute top-24 right-12 w-96 h-fit bg-custom-blue outline outline-offset-[-4px] rounded-lg p-4">
+    <h2 class="text-3xl">{{textEventTitle}}</h2>
+    <p class="text-xl">{{textEventParagraph}}</p>
+  </div>
 
-      {{> login}}
+  <!-- Options -->
+  <button id="option1"
+    class="w-fit h-fit absolute bottom-[calc(50%-48px+12px)] left-[calc(48px+160px+48px)] translate-y-[-50%] bg-custom-blue rounded-lg outline outline-offset-[-4px] p-4 text-xl hover:bg-custom-blue-hover">
+    {{option1}}
+  </button>
+  <button id="option2"
+    class="w-fit h-fit absolute top-[calc(50%+48px+12px)] left-[calc(48px+160px+48px)] translate-y-[-50%] bg-custom-blue rounded-lg outline outline-offset-[-4px] p-4 text-xl hover:bg-custom-blue-hover">
+    {{option2}}
+  </button>
 
-    </body>
+  <!-- Supplies -->
+  <div
+    class="absolute bottom-12 left-12 w-fit h-fit bg-custom-blue text-4xl rounded-lg p-6 outline outline-offset-[-4px]">
+    <img src="/assets/supplies/crew.png" class="w-10 h-10 inline-block">: {{crew}} <br>
+    <img src="/assets/supplies/fuel.png" class="w-10 h-10 inline-block">: {{fuel}} <br>
+    <img src="/assets/supplies/food.png" class="w-10 h-10 inline-block">: {{food}} <br>
+  </div>
+
+  {{> login}}
+
+</body>
+
 </html>
