@@ -20,6 +20,9 @@ const crystalAsteroidEvent = require("./events/crystal_asteroid")
 const futuristicShipEvent = require("./events/futuristic_ship")
 const gasGiantEvent = require("./events/gas_giant")
 const icePlanetEvent = require("./events/ice_planet")
+const lavaPlanetEvent = require("./events/lava_planet")
+const thermalPlanetEvent = require("./events/thermal_planet")
+const whiteGalaxyEvent = require("./events/white_galaxy")
 
 router.use("/asteroid", asteroidEvent.getRouter())
 router.use("/barren_planet", barrenPlanetEvent.getRouter())
@@ -29,6 +32,9 @@ router.use("/crystal_asteroid", crystalAsteroidEvent.getRouter())
 router.use("/futuristic_ship", futuristicShipEvent.getRouter())
 router.use("/gas_giant", gasGiantEvent.getRouter())
 router.use("/ice_planet", icePlanetEvent.getRouter())
+router.use("/lava_planet", lavaPlanetEvent.getRouter())
+router.use("/thermal_planet", thermalPlanetEvent.getRouter())
+router.use("/white_galaxy", whiteGalaxyEvent.getRouter())
 
 // Account paths
 const login = require("./login")
@@ -80,6 +86,15 @@ router.get("/", (req, res) => {
     }else if(prevEvent === "gas_giant"){
       req.session.currentEvent = "ice_planet"
       res.redirect("/ice_planet")
+    }else if(prevEvent === "ice_planet"){
+      req.session.currentEvent = "lava_planet"
+      res.redirect("/lava_planet")
+    }else if(prevEvent === "lava_planet"){
+      req.session.currentEvent = "thermal_planet"
+      res.redirect("/thermal_planet")
+    }else if(prevEvent === "thermal_planet"){
+      req.session.currentEvent = "white_galaxy"
+      res.redirect("/white_galaxy")
     }else{
       req.session.currentEvent = "intro"
       res.redirect("/intro")

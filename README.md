@@ -38,16 +38,15 @@ You get back to your home planet.
 
 ## Ideas for encounters:
 
-| Name             | Option 1                                                            | Option 2                                                  |
-|------------------|---------------------------------------------------------------------|-----------------------------------------------------------|
-| Lava Planet      | Harvest some food growing on the planet. | 
-
-
-
-| Thermal Planet |
-| White Galaxy |
 | Imperial Scout |
 | Imperial stuff |
+
+After the Imperial battle. That one crew member from the white galaxy tells you to 
+  "And as a parting gift know that everything is fair on a long enough timeline. So do good to get good."
+  - Forive them
+    - Good ending
+  - Destory them
+    - Bad ending
 
 
 | Asteroid Belt          | Go threw             | Go around                              |       |
