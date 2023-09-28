@@ -23,6 +23,12 @@ const icePlanetEvent = require("./events/ice_planet")
 const lavaPlanetEvent = require("./events/lava_planet")
 const thermalPlanetEvent = require("./events/thermal_planet")
 const whiteGalaxyEvent = require("./events/white_galaxy")
+const imperiumScoutEvent = require("./events/imperium_scout")
+const imperiumBattlecruiserEvent = require("./events/imperium_battlecruiser")
+const spaceStationEvent = require("./events/space_station")
+const astronautEvent = require("./events/astronaut")
+const imperiumDreadnoughtEvent = require("./events/imperium_dreadnought")
+const imperiumDreadnoughtSecondEvent = require("./events/imperium_dreadnought_second")
 
 router.use("/asteroid", asteroidEvent.getRouter())
 router.use("/barren_planet", barrenPlanetEvent.getRouter())
@@ -35,6 +41,12 @@ router.use("/ice_planet", icePlanetEvent.getRouter())
 router.use("/lava_planet", lavaPlanetEvent.getRouter())
 router.use("/thermal_planet", thermalPlanetEvent.getRouter())
 router.use("/white_galaxy", whiteGalaxyEvent.getRouter())
+router.use("/imperium_scout", imperiumScoutEvent.getRouter())
+router.use("/imperium_battlecruiser", imperiumBattlecruiserEvent.getRouter())
+router.use("/space_station", spaceStationEvent.getRouter())
+router.use("/astronaut", astronautEvent.getRouter())
+router.use("/imperium_dreadnought", imperiumDreadnoughtEvent.getRouter())
+router.use("/imperium_dreadnought_second", imperiumDreadnoughtSecondEvent.getRouter())
 
 // Account paths
 const login = require("./login")
@@ -95,6 +107,32 @@ router.get("/", (req, res) => {
     }else if(prevEvent === "thermal_planet"){
       req.session.currentEvent = "white_galaxy"
       res.redirect("/white_galaxy")
+    }else if(prevEvent === "white_galaxy"){
+      req.session.currentEvent = "imperium_scout"
+      res.redirect("/imperium_scout")
+    }else if(prevEvent === "imperium_scout"){
+      req.session.currentEvent = "imperium_battlecruiser"
+      res.redirect("/imperium_battlecruiser")
+    }else if(prevEvent === "imperium_battlecruiser"){
+      req.session.currentEvent = "space_station"
+      res.redirect("/space_station")
+    }else if(prevEvent === "space_station"){
+      req.session.currentEvent = "astronaut"
+      res.redirect("/astronaut")
+    }else if(prevEvent === "astronaut"){
+      req.session.currentEvent = "imperium_dreadnought"
+      res.redirect("/imperium_dreadnought")
+    }else if(prevEvent === "imperium_dreadnought"){
+      req.session.currentEvent = "imperium_dreadnought_second"
+      res.redirect("/imperium_dreadnought_second")
+    }else if(prevEvent === "imperium_dreadnought_second"){
+      if(req.session.crew === 0){
+        req.session.currentEvent = "gameover"
+        res.redirect("/gameover")
+      }else if(req.session.lightYears <= 0){
+        req.session.currentEvent = "youwin"
+        res.redirect("/youwin")
+      }
     }else{
       req.session.currentEvent = "intro"
       res.redirect("/intro")

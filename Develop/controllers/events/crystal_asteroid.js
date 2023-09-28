@@ -2,7 +2,7 @@ const Event = require("./event")
 
 const args = {
   textEventTitle: "Crystal Asteroid",
-  textEventParagraph: "A weird and interesting crystal asteroid approaches your location. You look closer at it and it almost seems artificially made. You loose your concentration looking at it and you have no time to move out of the way,",
+  textEventParagraph: "A weird and interesting crystal asteroid approaches your location. You look closer at it and it almost seems artificially made. You loose your concentration looking at it and you have no time to move out of the way.",
   option1: "Try and harvest the crystals for fuel.",
   option2: "It's too risky. Shoot to destroy it out of your path.",
   handlebarsName: "crystal_asteroid",

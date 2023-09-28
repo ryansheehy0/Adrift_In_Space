@@ -36,26 +36,6 @@ You get back to your home planet.
 - Top right distance form home counter
 - Center has the 2 clickable options
 
-## Ideas for encounters:
-
-| Imperial Scout |
-| Imperial stuff |
-
-After the Imperial battle. That one crew member from the white galaxy tells you to 
-  "And as a parting gift know that everything is fair on a long enough timeline. So do good to get good."
-  - Forive them
-    - Good ending
-  - Destory them
-    - Bad ending
-
-
-| Asteroid Belt          | Go threw             | Go around                              |       |
-| Space Squid            | Harvest ink for fuel | Hint for food                          |       |
-| Pirate Ship            | Fight                | Bargain                                |       |
-| Moon Colony            | Touch down and trade | They could be a cult. Fight.           |       |
-| Derelict Space Station | Plunder for supplies | Shoot it apart                         |       |
-| Ancient Alien Monolith | Scan                 | Ignore                                 |       |
-
 ## Future Features
   - Long term consequences
   - How 3 supplies interact with each other:
