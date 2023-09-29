@@ -5,7 +5,7 @@ router.get("/", async (req, res) => {
   try{
     const lightYears = 14
     const crew = 5
-    const fuel = 15
+    const fuel = 16
     const food = 10
 
     req.session.lightYears = lightYears

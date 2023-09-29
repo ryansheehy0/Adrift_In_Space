@@ -8,10 +8,12 @@ const args = {
   handlebarsName: "imperium_dreadnought",
   option1Function: function(req, locals){
     locals.textEventParagraph = "Trusting the advice of your crew member, you send the rest of your crew into the Dreadnought. Hopefully they will find a way to brow up the Dreadnought or shut it down from the inside."
-    locals.fuel += 1
-    req.session.fuel += 1
-    locals.lightYears += 1
-    req.session.lightYears += 1
+    if(req.session.fuel > 0){
+      locals.fuel += 1
+      req.session.fuel += 1
+      locals.lightYears += 1
+      req.session.lightYears += 1
+    }
     if(req.session.food === 0){
       locals.crew += 1
       req.session.crew += 1
