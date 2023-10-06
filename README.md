@@ -24,7 +24,7 @@
 ## Description
 You are an AI captain of an adrift space ship trying to survive and get back to your home planet.
 
-You can check out the game at this [link](https://ryansheehy0-adrift-in-space-de8f1563a0e1.herokuapp.com/).
+You can check out the game at this [link](https://ryansheehy0-adrift-in-space-33f6db3a4a3a.herokuapp.com/intro).
 
 ## License
 [![MIT License](https://img.shields.io/badge/MIT_License-blue)](https://choosealicense.com/licenses/mit/)
